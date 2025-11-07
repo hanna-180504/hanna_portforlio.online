@@ -7,12 +7,12 @@ body {
   text-align: center;    /* Center text globally */
 }
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 120px;        /* Size */
+  height: 120px;
+  border-radius: 50%;  /* Makes it round */
+  object-fit: cover;   /* Ensures proper crop */
   border: 3px solid #ffffff;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 /* === Header === */
 header {
