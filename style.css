@@ -45,6 +45,10 @@ header {
   transition: 0.3s;
 }
 
+#about p {
+  text-align: center;
+}
+
 
 #skills {
   width: 70%;
