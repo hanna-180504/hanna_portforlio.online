@@ -51,12 +51,14 @@ header {
   text-align: center;   /* ⬅ centers text */
 }
 
-.section-divider {
-  width: 60%;
+.small-bar {
+  width: 40px;
+  height: 2px;
+  background: rgba(255,255,255,0.4);
   margin: 40px auto;
-  border: 0;
-  border-top: 1px solid rgba(255,255,255,0.3);
+  border-radius: 2px;
 }
+
 
 #skills {
   width: 70%;
