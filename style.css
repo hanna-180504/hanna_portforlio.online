@@ -23,7 +23,7 @@ header {
 }
 
 .quick-links {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 12px;
   width: 50%;
@@ -45,19 +45,6 @@ header {
   transition: 0.3s;
 }
 
-.quick-links a:hover {
-  border-bottom: 2px solid black;
-  transform: scale(1.05);
-}
-
-.quick-links a::after {
-  content: " | ";
-  color: #000;
-}
-
-.quick-links a:last-child::after {
-  content: "";
-}
 
 /* === Sections === */
 section {
