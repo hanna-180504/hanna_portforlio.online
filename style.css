@@ -22,6 +22,35 @@ header {
   padding: 60px 20px;
 }
 
+.quick-links {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.quick-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.quick-links a:hover {
+  border-bottom: 2px solid black;
+  transform: scale(1.05);
+}
+
+
 /* === Sections === */
 section {
   padding: 20px 40px;
