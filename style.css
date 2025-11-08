@@ -52,8 +52,8 @@ header {
 }
 
 .small-bar {
-  width: 60px;
-  height: 5px;
+  width: 40px;
+  height: 2px;
   background: rgba(255,255,255,0.4);
   margin: 40px auto;
   border-radius: 2px;
