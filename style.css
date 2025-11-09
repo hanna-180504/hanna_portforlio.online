@@ -136,7 +136,7 @@ section {
 
 /* 🔹 Project Card Image — smaller thumbnail */
 .project-card img {
-  width: 250px;      /* adjust size */
+  width: 600px;      /* adjust size */
   height: 250px;     /* keep square */
   object-fit: cover; /* crop nicely */
   border-radius: 8px;
