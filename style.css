@@ -157,11 +157,14 @@ section {
   background: rgba(0,0,0,0.85);
 }
 
-/* POPUP BOX */
 .modal-content {
   background: #2a2a2a;
   width: 80%;
   max-width: 700px;
+
+  max-height: 80vh;     /* ✅ limits size */
+  overflow-y: auto;     /* ✅ enables scroll inside */
+
   margin: 80px auto;
   padding: 25px;
   border-radius: 10px;
