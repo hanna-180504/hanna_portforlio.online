@@ -138,7 +138,7 @@ section {
 .project-card img {
   width: 600px;      /* adjust size */
   height: 500px;     /* keep square */
-  object-fit: cover; /* crop nicely */
+  object-fit: contain; 
   border-radius: 8px;
   display: block;
   margin: 0 auto 15px auto;
