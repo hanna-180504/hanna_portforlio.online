@@ -121,6 +121,42 @@ section {
   color: #66aaff;
   text-decoration: none;
 }
+.project-detail {
+  width: 70%;
+  margin: 40px auto;
+  text-align: justify;
+  color: #ddd;
+}
+
+.project-detail h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.project-detail-img {
+  width: 25%;
+  max-width: 220px;
+  display: block;
+  margin: 0 auto 25px auto;
+  border-radius: 8px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
 
 /* === Footer === */
 footer {
