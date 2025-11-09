@@ -198,6 +198,19 @@ section {
   background: rgba(255,255,255,0.3);
   border-radius: 3px;
 }
+@media (max-width: 600px) {
+
+  .modal-content {
+    width: 92%;
+    max-height: 80vh;   /* slightly shorter for screens */
+    margin: 40px auto;
+    padding: 16px;
+  }
+
+  .modal-content img {
+    max-width: 240px;   /* ✅ smaller image on mobile */
+  }
+}
 
 
 /* Close button */
