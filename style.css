@@ -249,9 +249,11 @@ section {
   object-fit: contain;
   display: block;
   margin: auto;
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
   cursor: zoom-in;
+  transform: scale(1);   /* ✅ ensure default */
 }
+
 
 #image-modal .close {
   position: absolute;
