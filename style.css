@@ -200,7 +200,7 @@ section {
 
 /* Project card sizing */
 .project-card {
-  min-width: 300px;  /* adjust width of card */
+  min-width: 600px;  /* adjust width of card */
   flex: 0 0 auto;
 }
 
