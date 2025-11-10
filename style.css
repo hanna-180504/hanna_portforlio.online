@@ -217,6 +217,29 @@ section {
   }
 }
 
+@media (max-width: 600px) {
+
+  .modal-content {
+    width: 92%;
+    max-height: 80vh;   /* fit inside phone screen */
+    margin: 30px auto;
+    padding: 14px;
+  }
+
+  .modal-content img {
+    max-width: 230px;   /* smaller image for mobile */
+    margin-bottom: 10px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.3rem;   /* slightly smaller heading */
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;   /* more readable */
+    line-height: 1.4;
+  }
+}
 
 /* Close button */
 .close {
