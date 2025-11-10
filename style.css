@@ -152,6 +152,45 @@ section {
     height: auto;
   }
 
+  /* Overlay */
+#image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+}
+
+/* Box for image */
+.image-box {
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Image styles */
+#modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Close button */
+#image-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
   .project-card h3 {
     margin-top: 4px;
     margin-bottom: 4px;
