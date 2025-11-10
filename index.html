@@ -116,77 +116,82 @@
 
   <div class="section-bar"></div>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>My Projects</h2>
+ <!-- PROJECTS -->
+<section id="projects">
+  <h2>My Projects</h2>
 
   <div class="projects-wrapper">
+
+    <!-- LEFT SCROLL -->
     <button class="scroll-btn left" onclick="scrollProjects(-300)">&#10094;</button>
-    
+
+    <!-- PROJECTS CONTAINER -->
     <div class="projects-container">
 
       <!-- PROJECT 1 -->
       <div class="project-card">
         <img src="NDVI.jpg" alt="Vegetation Analysis" onclick="openImage('NDVI.jpg')">
         <h3>Vegetation Analysis in Trivandrum</h3>
-        <p>Performed temporal analysis of vegetation health using NDVI over time (2015-2025)</p>
+        <p>Performed temporal analysis of vegetation health using NDVI over time (2015–2025)</p>
+
+        <!-- VIEW ARTICLE -->
         <a class="btn" onclick="openModal('ndvi-modal')">View Article</a>
-        
-        <!-- PROJECT MODAL -->
-        <div id="ndvi-modal" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('ndvi-modal')">&times;</span>
-
-            <h2>NDVI Analysis Study</h2>
-
-            <img src="NDVI.jpg" alt="NDVI Analysis">
-
-            <p>
-              In this study, I calculated the Normalized Difference Vegetation Index (NDVI) for 
-              the Trivandrum region to understand vegetation health over time.
-              Satellite imagery from Landsat-8/9 (2015 and 2025) was downloaded from USGS Earth Explorer.
-              To streamline the workflow, model builder was used to automate the processing steps.
-              The red (Band 4) and near-infrared (Band 5) layers were first clipped to the study area
-              and NDVI was computed using the formula:
-              <p class="center-text">
-              NDVI = (B5 − B4) / (B5 + B4)
-              </p>
-            <p>
-              After calculating NDVI values, used Zonal Statistics Table toolbox to calculate
-              the mean NDVI value. Input raster is Trivandrum polygon raster and value raster is NDV 2025, NDVI 2015. 
-            </p>
-            <p class='center-text">
-              NDVI 2015 mean value = 0.32
-            </p>
-              <p class="center-text">
-              NDVI 2025 mean value = 0.39
-              </p>
-              <p>
-              Difference of mean NDVI value is 0.07. The results show slight improvement in vegetation over 10 years.
-            </p>
-            
-            <p class="center-text">
-            <span class="underline-text">Colour interpretation</span>
-            </p>
-            <p class="center-text">
-            Green - Dense, healthy vegetation
-            </p>
-            <p class="center-text">
-            Yellow - Low to moderate vegetation or agricultural land
-            </p>
-            <p class="center-text">
-            Red - Urban Area
-            </p>
-            </p>
-          </div>
-        </div>
       </div>
-      </div>
-      
+
+    </div> <!-- ✅ CLOSE projects-container HERE -->
+
+    <!-- RIGHT SCROLL -->
     <button class="scroll-btn right" onclick="scrollProjects(300)">&#10095;</button>
 
-    </div>
-  </section>
+  </div>
+</section>
+
+
+<!-- ✅ PROJECT MODAL OUTSIDE PROJECT CARD -->
+<div id="ndvi-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ndvi-modal')">&times;</span>
+
+    <h2>NDVI Analysis Study</h2>
+
+    <img src="NDVI.jpg" alt="NDVI Analysis">
+
+    <p>
+      In this study, I calculated the Normalized Difference Vegetation Index (NDVI) 
+      for the Trivandrum region to understand vegetation health over time.
+      Satellite imagery from Landsat-8/9 (2015 and 2025) was downloaded from USGS Earth Explorer.
+      Model Builder was used to automate the processing workflow.
+    </p>
+
+    <p class="center-text">
+      NDVI = (B5 − B4) / (B5 + B4)
+    </p>
+
+    <p>
+      After calculating NDVI values, Zonal Statistics was used to calculate
+      the mean NDVI value for both years.
+    </p>
+
+    <p class="center-text">
+      NDVI 2015 mean value = 0.32
+    </p>
+
+    <p class="center-text">
+      NDVI 2025 mean value = 0.39
+    </p>
+
+    <p>
+      The mean NDVI increased by 0.07, showing a slight improvement in vegetation health over 10 years.
+    </p>
+
+    <p class="center-text underline-text">Colour Interpretation</p>
+
+    <p class="center-text">Green — Dense, healthy vegetation</p>
+    <p class="center-text">Yellow — Low/moderate vegetation or agricultural land</p>
+    <p class="center-text">Red — Urban Area</p>
+
+  </div>
+</div>
 
   <!-- IMAGE ONLY MODAL -->
   <div id="image-modal" class="modal">
