@@ -6,6 +6,12 @@ body {
   color: #ffffff;        /* White text */
   text-align: center;    /* Center text globally */
 }
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .profile-pic {
   width: 150px;        /* Size */
   height: 150px;
@@ -214,9 +220,10 @@ section {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0,0,0,0.85);
+  overflow: hidden;
 }
 
 .modal-content {
@@ -277,6 +284,12 @@ section {
   .modal-content p {
     font-size: 0.9rem;   /* more readable */
     line-height: 1.4;
+  }
+}
+@media (max-width: 600px) {
+  #modal-img {
+    max-width: 70vw;   /* slightly smaller */
+    max-height: 50vh;
   }
 }
 
