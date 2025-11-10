@@ -232,57 +232,44 @@ body.modal-open {
   border-radius: 3px;
 }
 
-/* Contact Section - Light Grey */
 #contact {
   width: 70%;
   margin: 40px auto;
   text-align: center;
-  background-color: #6E6E6E; /* dark grey background */
+  background-color: #6E6E6E; /* dark grey */
   padding: 25px 20px;
   border-radius: 12px;
-  
+  border: 1px solid #444;
 }
 
-/* Contact lines with emojis */
 .contact-line {
   margin: 12px 0;
   font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff !important; /* dark grey text */
 }
 
-/* Links (email/LinkedIn) */
 .contact-link {
-  color: #ffffff !important; /* match text color */
+  color: #000000; /* black text */
   font-weight: 500;
-  text-decoration: none; /* remove underline */
-  margin-left: 6px;
+  text-decoration: none; /* no underline */
 }
 
+/* Hover removed, link stays black */
 .contact-link:hover {
-  color: #ffffff !important; /* slightly darker on hover */
-  text-decoration: underline; 
+  color: #000000 !important;
+  text-decoration: none !important;
 }
 
-/* Mobile adjustments */
 @media (max-width: 600px) {
   #contact {
     width: 90%;
     padding: 20px;
-    background-color: #6E6E6E; /* ensure mobile background stays dark grey */
-  }
-  
-  .contact-line {
-    font-size: 16px;
-    color: #ffffff !important; /* force black on mobile */
   }
 
-  .contact-link {
-    color: #ffffff !important; /* force black links on mobile */
+  .contact-line {
+    font-size: 16px;
   }
 }
+
 
 /* Close button text modals */
 .close {
