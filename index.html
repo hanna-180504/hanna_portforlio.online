@@ -12,8 +12,8 @@
     <img src="dp.jpg" alt="My photo" class="profile-pic">
     <h1>Hanna Shamna</h1>
     <p>GIS Analyst | GIS Developer | Student</p>
-    <!-- ✅ CONTACT INSIDE PROFILE -->
-  <div id="profile-contact">
+
+    <div id="profile-contact">
       <p class="contact-line">
       <a class="contact-link" href="mailto:hannah.1805041@gmail.com">
       📧 Email
@@ -25,7 +25,7 @@
           LinkedIn
         </a>
       </p>
-  </div>
+    </div>
   </header>
   
   <!-- QUICK LINKS -->
@@ -128,17 +128,16 @@
     <!-- PROJECTS CONTAINER -->
     <div class="projects-container">
 
-      <!-- PROJECT 1 -->
+      <!-- ✅ PROJECT 1 -->
       <div class="project-card">
-        <img src="NDVI.jpg" alt="Vegetation Analysis" onclick="openImage('NDVI.jpg')">
+        <img src="NDVI.jpg" alt="Vegetation Analysis" onclick="openImageModal('NDVI.jpg')">
         <h3>Vegetation Analysis in Trivandrum</h3>
         <p>Performed temporal analysis of vegetation health using NDVI over time (2015–2025)</p>
 
-        <!-- VIEW ARTICLE -->
         <a class="btn" onclick="openModal('ndvi-modal')">View Article</a>
       </div>
 
-    </div> <!-- ✅ CLOSE projects-container HERE -->
+    </div>
 
     <!-- RIGHT SCROLL -->
     <button class="scroll-btn right" onclick="scrollProjects(300)">&#10095;</button>
@@ -147,7 +146,7 @@
 </section>
 
 
-<!-- ✅ PROJECT MODAL OUTSIDE PROJECT CARD -->
+<!-- ✅ PROJECT MODAL -->
 <div id="ndvi-modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('ndvi-modal')">&times;</span>
@@ -193,20 +192,19 @@
   </div>
 </div>
 
-  <!-- IMAGE ONLY MODAL -->
-  <div id="image-modal" class="modal">
-    <div class="image-box">
-      <span class="close" onclick="closeImage()">&times;</span>
-      <img id="modal-img" src="">
-    </div>
+<!-- ✅ IMAGE POPUP -->
+<div id="image-modal" class="modal">
+  <div class="image-box">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="modal-img" src="">
   </div>
+</div>
 
-  <footer>
-    <p>© 2025 Hanna Shamna</p>
-  </footer>
+<footer>
+  <p>© 2025 Hanna Shamna</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
