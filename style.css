@@ -151,6 +151,7 @@ section {
   color: #66aaff;
   text-decoration: none;
 }
+
 .projects-wrapper {
   position: relative;
   display: flex;
@@ -196,26 +197,12 @@ section {
   margin-left: 10px;
 }
 
-/* Project card sizing */
-.project-card {
-  min-width: 300px;  /* adjust width of card */
-  flex: 0 0 auto;
-}
-
 
 /* Project card sizing */
 .project-card {
   min-width: 300px;  /* adjust width of card */
   flex: 0 0 auto;
 }
-
-
-/* Project card sizing */
-.project-card {
-  min-width: 300px;  /* adjust width of card */
-  flex: 0 0 auto;
-}
-
 
 /* MODAL — IMAGE ONLY */
 #image-modal {
