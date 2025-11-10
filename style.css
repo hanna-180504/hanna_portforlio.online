@@ -173,28 +173,37 @@ section {
 
 /* Scroll buttons */
 .scroll-btn {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
   color: white;
   border: none;
   font-size: 2rem;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-  position: relative;
+  position: absolute; /* Position over container */
+  top: 50%;           /* Center vertically */
+  transform: translateY(-50%);
   z-index: 10;
+}
+
+.scroll-btn.left {
+  left: -15px; /* position left side */
+}
+
+.scroll-btn.right {
+  right: -15px; /* position right side */
 }
 
 .scroll-btn:hover {
   background-color: rgba(0,0,0,0.9);
 }
 
-.scroll-btn.left {
-  margin-right: 10px;
+/* Project card sizing */
+.project-card {
+  min-width: 300px;  /* adjust width of card */
+  flex: 0 0 auto;
 }
 
-.scroll-btn.right {
-  margin-left: 10px;
-}
 
 /* Project card sizing */
 .project-card {
