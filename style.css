@@ -252,16 +252,16 @@ body.modal-open {
   margin: 8px 0;
 }
 
-#contact a {
-  color: #66aaff;
-  text-decoration: none;
-  font-weight: 600;
+#contact a.contact-link {
+  color: #ffffff;           /* White text */
+  font-weight: 500;
+  text-decoration: none;    /* Remove underline */
 }
 
-#contact a:hover {
+#contact a.contact-link:hover {
   text-decoration: underline;
+  color: #66aaff;           /* Light blue hover */
 }
-
 
 /* Close button text modals */
 .close {
