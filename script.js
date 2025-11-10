@@ -27,106 +27,70 @@ window.onclick = function(event) {
   if (event.target === modal) {
     closeImage();
   }
-  
 }
 let scale = 1;
-let isPanning = false;
-let startX, startY;
-let translateX = 0, translateY = 0;
+let isDragging = false;
+let lastX = 0, lastY = 0;
+let posX = 0, posY = 0;
+
+function openImageModal(src) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  scale = 1;
+  posX = posY = 0;
+  modalImg.style.transform = `translate(0px,0px) scale(1)`;
+  modalImg.src = src;
+  modal.style.display = "flex";
+  document.body.classList.add("modal-open");
+}
+
+function closeImage() {
+  document.getElementById("image-modal").style.display = "none";
+  document.body.classList.remove("modal-open");
+}
+
+document.getElementById("image-modal").addEventListener("wheel", (e) => {
+  const modalImg = document.getElementById("modal-img");
+
+  if (e.deltaY < 0) scale += 0.1;
+  else scale = Math.max(1, scale - 0.1);
+
+  modalImg.style.transform = `translate(${posX}px,${posY}px) scale(${scale})`;
+});
 
 const modalImg = document.getElementById("modal-img");
-const imageModal = document.getElementById("image-modal");
 
-/* ---------------- DESKTOP DOUBLE CLICK ZOOM ---------------- */
-modalImg.addEventListener("dblclick", () => {
-  if (scale === 1) scale = 2;
-  else scale = 1;
-
-  translateX = 0;
-  translateY = 0;
-  applyTransform();
-});
-
-/* ---------------- DESKTOP DRAG ---------------- */
 modalImg.addEventListener("mousedown", (e) => {
-  isPanning = true;
-  startX = e.clientX - translateX;
-  startY = e.clientY - translateY;
-  modalImg.style.cursor = "grabbing";
+  isDragging = true;
+  lastX = e.clientX;
+  lastY = e.clientY;
 });
 
-modalImg.addEventListener("mousemove", (e) => {
-  if (!isPanning) return;
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
 
-  translateX = e.clientX - startX;
-  translateY = e.clientY - startY;
-  applyTransform();
+  posX += (e.clientX - lastX);
+  posY += (e.clientY - lastY);
+  lastX = e.clientX;
+  lastY = e.clientY;
+
+  modalImg.style.transform = `translate(${posX}px,${posY}px) scale(${scale})`;
 });
 
-window.addEventListener("mouseup", () => {
-  isPanning = false;
-  modalImg.style.cursor = "grab";
+document.addEventListener("mouseup", () => {
+  isDragging = false;
 });
 
-/* ---------------- MOBILE TOUCH SUPPORT ---------------- */
-
-// double-tap zoom
 let lastTap = 0;
-modalImg.addEventListener("touchend", (e) => {
-  let now = Date.now();
+
+modalImg.addEventListener("touchstart", (e) => {
+  const now = Date.now();
+
   if (now - lastTap < 300) {
-    // double tap
-    scale = (scale === 1 ? 2 : 1);
-    translateX = 0;
-    translateY = 0;
-    applyTransform();
+    // double tap → reset zoom
+    scale = 1;
+    posX = posY = 0;
+    modalImg.style.transform = `translate(0px,0px) scale(1)`;
   }
   lastTap = now;
 });
-
-// dragging
-modalImg.addEventListener("touchstart", (e) => {
-  if (e.touches.length === 1) {
-    const t = e.touches[0];
-    startX = t.clientX - translateX;
-    startY = t.clientY - translateY;
-  }
-});
-
-modalImg.addEventListener("touchmove", (e) => {
-  if (e.touches.length === 1) {
-    const t = e.touches[0];
-    translateX = t.clientX - startX;
-    translateY = t.clientY - startY;
-    applyTransform();
-  }
-});
-
-// pinch-zoom
-let startDistance = 0;
-modalImg.addEventListener("touchmove", (e) => {
-  if (e.touches.length === 2) {
-    e.preventDefault();
-    const dx = e.touches[0].clientX - e.touches[1].clientX;
-    const dy = e.touches[0].clientY - e.touches[1].clientY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-
-    if (!startDistance) startDistance = dist;
-    else {
-      const zoom = dist / startDistance;
-      scale = Math.min(Math.max(1, scale * zoom), 4);   // limit scale
-      applyTransform();
-    }
-  }
-});
-
-modalImg.addEventListener("touchend", () => {
-  startDistance = 0;
-});
-
-/* ---------------- APPLY TRANSFORM ---------------- */
-function applyTransform() {
-  modalImg.style.transform =
-    `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-}
-
