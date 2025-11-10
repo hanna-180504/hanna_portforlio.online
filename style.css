@@ -247,7 +247,9 @@ section {
   max-width: 80vw;
   max-height: 60vh;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius:8px;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
 
