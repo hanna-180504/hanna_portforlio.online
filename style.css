@@ -241,6 +241,11 @@ section {
   }
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+
 /* Close button */
 .close {
   float: right;
