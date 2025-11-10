@@ -243,16 +243,21 @@ section {
   padding: 10px;
 }
 
-#modal-img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;   /* ✅ limit size on larger screens */
   display: block;
-  margin: auto;
-  transition: transform 0.2s ease;
-  cursor: zoom-in;
-  transform: scale(1);   /* ✅ ensure default */
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
 }
+
+@media (max-width: 600px) {
+  .modal-content img {
+    max-width: 250px;   /* ✅ smaller on phones */
+  }
+}
+
 
 
 #image-modal .close {
