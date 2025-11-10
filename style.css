@@ -243,11 +243,20 @@ section {
   padding: 10px;
 }
 
-#modal-img {
-  max-width: 90vw;
-  max-height: 90vh;
+##modal-img {
+  max-width: 70vw;
+  max-height: 70vh;
   object-fit: contain;
   transition: transform 0.25s ease;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  #modal-img {
+    max-width: 90vw;
+    max-height: 60vh;
+  }
 }
 
 #image-modal .close {
