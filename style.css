@@ -194,7 +194,7 @@ section {
 #image-modal .close {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 50px;
   font-size: 2rem;
   cursor: pointer;
   color: white;
