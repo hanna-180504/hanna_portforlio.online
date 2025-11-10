@@ -237,7 +237,7 @@ body.modal-open {
   width: 70%;
   margin: 40px auto;
   text-align: center;
-  background-color: #d9d9d9; /* light grey background */
+  background-color: #2b2b2b; /* dark grey background */
   padding: 25px 20px;
   border-radius: 12px;
   border: 1px solid #ccc; /* optional subtle border */
@@ -250,12 +250,12 @@ body.modal-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333333; /* dark grey text */
+  color: #000000; /* dark grey text */
 }
 
 /* Links (email/LinkedIn) */
 .contact-link {
-  color: #333333; /* match text color */
+  color: #000000; /* match text color */
   font-weight: 500;
   text-decoration: none; /* remove underline */
   margin-left: 6px;
