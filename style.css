@@ -232,6 +232,37 @@ body.modal-open {
   border-radius: 3px;
 }
 
+#contact {
+  width: 70%;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #1f1f1f, #292929);
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+
+#contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+#contact a {
+  color: #66aaff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
 /* Close button text modals */
 .close {
   float: right;
