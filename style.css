@@ -266,6 +266,10 @@ body.modal-open {
 .center-text {
   text-align: center;
 }
+.underline-text {
+  text-decoration: underline;
+  font-weight: 600;
+}
 
 /* MODAL CARD CONTENT */
 .modal {
