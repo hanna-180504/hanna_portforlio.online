@@ -162,11 +162,12 @@ section {
 }
 
 .image-box {
-  max-width: 90%;
-  max-height: 90vh;
+  max-width: 100%;
+  max-height: 100vh;
   margin: auto;
   position: relative;
   display: flex;
+  padding: 10%;
   justify-content: center;
   align-items: center;
 }
