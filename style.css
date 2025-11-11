@@ -225,7 +225,7 @@ section {
 #image-modal {
   display: none;
   position: fixed;
-  z-index: 5000;   /* higher than other modals */
+  z-index: 2000;   /* higher than other modals */
   left: 0;
   top: 0;
   width: 100vw;
