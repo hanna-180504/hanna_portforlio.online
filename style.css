@@ -394,13 +394,14 @@ body.modal-open {
   color: #fff;
 }
 
-.small-modal-img {
+.medium-modal-img {
   display: block;
-  max-width: 120px;      
-  max-height: 120px;
-  margin: 0 auto 15px auto; /* center and spacing */
+  max-width: 400px;      /* adjust width to medium size */
+  width: 80%;            /* responsive */
+  margin: 10px auto 20px auto; /* center with spacing */
   border-radius: 5px;
 }
+
 
 /* === Footer === */
 footer {
