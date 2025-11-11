@@ -35,13 +35,17 @@ function openImageModal(src) {
 
 /* ✅ CLOSE IMAGE MODAL */
 function closeImage() {
-  document.getElementById("image-modal").style.display = "none";
+  const modal = document.getElementById("image-modal");
+  modal.style.display = "none";
   document.body.classList.remove("modal-open");
 }
 
-/* ✅ CLOSE WHEN CLICK OUTSIDE */
+/* ✅ CLOSE WHEN CLICK OUTSIDE IMAGE */
 window.addEventListener("click", (event) => {
   const modal = document.getElementById("image-modal");
+  const imgBox = document.querySelector("#image-modal .image-box");
+
+  // If clicked outside image box → close
   if (event.target === modal) {
     closeImage();
   }
@@ -49,6 +53,7 @@ window.addEventListener("click", (event) => {
 
 /* ✅ SCROLL ZOOM */
 document.getElementById("image-modal").addEventListener("wheel", (e) => {
+  e.preventDefault();
   const modalImg = document.getElementById("modal-img");
 
   if (e.deltaY < 0) scale += 0.1;
@@ -100,3 +105,5 @@ function scrollProjects(amount) {
   const container = document.querySelector(".projects-container");
   container.scrollBy({ left: amount, behavior: "smooth" });
 }
+
+
