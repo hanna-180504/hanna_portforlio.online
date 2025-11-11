@@ -224,7 +224,7 @@ section {
 /* ✅ FIXED CLOSE BUTTON (separate class) */
 #image-modal .close-img {
   position: absolute;
-  top: 30px;
+  top: 20px;
   right: 25px;
   font-size: 2.5rem;
   cursor: pointer;
