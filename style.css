@@ -219,48 +219,7 @@ section {
 
 /* =============== IMAGE MODAL FIX (UPDATED) =============== */
 
-/* ✅ IMAGE POPUP MODAL */
-#image-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  z-index: 2000;
-  justify-content: center;
-  align-items: center;
-}
 
-/* ✅ IMAGE CONTAINER */
-#image-modal .image-box {
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-/* ✅ IMAGE STYLING */
-#modal-img {
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 10px;
-  display: block;
-  margin: 0;
-  transform-origin: center;
-}
-
-/* ✅ MOBILE FIX */
-@media (max-width: 600px) {
-  #modal-img {
-    max-width: 95vw;
-    max-height: 80vh;
-  }
-}
 
 /* ✅ FIXED CLOSE BUTTON (separate class) */
 #image-modal .close-img {
