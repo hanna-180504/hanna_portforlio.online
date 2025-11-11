@@ -222,6 +222,22 @@ section {
 
 
 /* ✅ FIX IMAGE MODAL POSITION + LAYER */
+
+/* ✅ FIX CLOSE BUTTON INSIDE image-box */
+#image-modal .close-img {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+  z-index: 9999;
+}
+
+
+#image-modal .close-img:hover {
+  color: #ffdddd;
+}
 #image-modal {
   display: none;
   position: fixed;
@@ -254,21 +270,7 @@ section {
   border-radius: 10px;
 }
 
-/* ✅ FIX CLOSE BUTTON INSIDE image-box */
-#image-modal .close-img {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: white;
-  z-index: 9999;
-}
 
-
-#image-modal .close-img:hover {
-  color: #ffdddd;
-}
 
 /* Disable background scroll when modal open */
 body.modal-open {
